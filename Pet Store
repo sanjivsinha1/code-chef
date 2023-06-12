@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int m;
+	cin>>m;
+	for(int k=0;k<m;k++){
+	int n;
+	cin >> n;
+	int ar[n];
+	map<int, int> mpp;
+	for(int i=0;i<n;i++){
+		cin >> ar[i];
+		mpp[ar[i]]++;
+	}
+	int flg = 0;
+	for(int i=0;i<n;i++){
+		flg += (mpp[ar[i]] % 2);
+	}
+	cout << ((flg == 0) ? "YES" : "NO") << endl;
+	}
+	return 0;
+}
