@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	int m;
+	int l=0;
+	int a;
+	cin>>n;
+	for(int i=0;i<n;i++){
+	    cin>>m;
+	    unordered_map<int,int> mp;
+	    for(int j=0;j<m;j++){
+	        cin>>a;
+	        mp[a]++;
+	    }
+    	for(auto x=mp.begin();x!=mp.end();x++){
+    	    if(x->second%2!=0){
+    	        cout<<x->first<<endl;
+    	    }
+    	}
+	}
+	return 0;
+}
